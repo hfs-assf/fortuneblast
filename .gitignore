@@ -1,0 +1,42 @@
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+.expo/
+.expo-shared/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Database backups
+*.sql
+*.dump
+*.backup
+
+# Certificates and private keys
+*.pem
+*.key
+*.crt
+
+# Temporary files
+tmp/
+temp/

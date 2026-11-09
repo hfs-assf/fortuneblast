@@ -1,0 +1,24 @@
+{
+  "name": "fortune-blast-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fortune Blast Monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "dev:api": "npm run start:dev --workspace=@fortuneblast/api",
+    "build:api": "npm run build --workspace=@fortuneblast/api",
+    "lint:api": "npm run lint --workspace=@fortuneblast/api",
+    "test:api": "npm run test --workspace=@fortuneblast/api",
+    "db:up": "docker compose -f infra/docker/docker-compose.yml up -d",
+    "db:down": "docker compose -f infra/docker/docker-compose.yml down",
+    "db:logs": "docker compose -f infra/docker/docker-compose.yml logs -f",
+    "db:studio": "npm run prisma:studio --workspace=@fortuneblast/api"
+  }
+}
